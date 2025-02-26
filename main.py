@@ -5,12 +5,152 @@ from PyQt6 import uic  # Импортируем uic
 from PyQt6.QtCore import Qt
 from PyQt6.QtGui import QColor
 from PyQt6.QtWidgets import QApplication, QMainWindow, QTableWidgetItem
+from PyQt6 import QtCore, QtGui, QtWidgets
 
 
-class AddWidget(QMainWindow):
+class Ui_AddEditCoffee(object):
+	def setupUi(self, MainWindow):
+		MainWindow.setObjectName("MainWindow")
+		MainWindow.resize(800, 600)
+		MainWindow.setMinimumSize(QtCore.QSize(800, 600))
+		MainWindow.setMaximumSize(QtCore.QSize(800, 600))
+		self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
+		self.centralwidget.setObjectName("centralwidget")
+		self.label = QtWidgets.QLabel(parent=self.centralwidget)
+		self.label.setGeometry(QtCore.QRect(160, 0, 201, 51))
+		font = QtGui.QFont()
+		font.setPointSize(12)
+		self.label.setFont(font)
+		self.label.setAlignment(
+			QtCore.Qt.AlignmentFlag.AlignLeading | QtCore.Qt.AlignmentFlag.AlignLeft | QtCore.Qt.AlignmentFlag.AlignVCenter)
+		self.label.setObjectName("label")
+		self.l1 = QtWidgets.QLineEdit(parent=self.centralwidget)
+		self.l1.setGeometry(QtCore.QRect(410, 10, 181, 41))
+		self.l1.setObjectName("l1")
+		self.l2 = QtWidgets.QLineEdit(parent=self.centralwidget)
+		self.l2.setGeometry(QtCore.QRect(410, 80, 181, 41))
+		self.l2.setObjectName("l2")
+		self.l3 = QtWidgets.QLineEdit(parent=self.centralwidget)
+		self.l3.setGeometry(QtCore.QRect(410, 150, 181, 41))
+		self.l3.setObjectName("l3")
+		self.label_2 = QtWidgets.QLabel(parent=self.centralwidget)
+		self.label_2.setGeometry(QtCore.QRect(160, 80, 181, 41))
+		font = QtGui.QFont()
+		font.setPointSize(12)
+		self.label_2.setFont(font)
+		self.label_2.setAlignment(
+			QtCore.Qt.AlignmentFlag.AlignLeading | QtCore.Qt.AlignmentFlag.AlignLeft | QtCore.Qt.AlignmentFlag.AlignVCenter)
+		self.label_2.setObjectName("label_2")
+		self.label_3 = QtWidgets.QLabel(parent=self.centralwidget)
+		self.label_3.setGeometry(QtCore.QRect(160, 150, 181, 51))
+		font = QtGui.QFont()
+		font.setPointSize(12)
+		self.label_3.setFont(font)
+		self.label_3.setAlignment(
+			QtCore.Qt.AlignmentFlag.AlignLeading | QtCore.Qt.AlignmentFlag.AlignLeft | QtCore.Qt.AlignmentFlag.AlignVCenter)
+		self.label_3.setObjectName("label_3")
+		self.label_4 = QtWidgets.QLabel(parent=self.centralwidget)
+		self.label_4.setGeometry(QtCore.QRect(160, 230, 191, 51))
+		font = QtGui.QFont()
+		font.setPointSize(12)
+		self.label_4.setFont(font)
+		self.label_4.setAlignment(
+			QtCore.Qt.AlignmentFlag.AlignLeading | QtCore.Qt.AlignmentFlag.AlignLeft | QtCore.Qt.AlignmentFlag.AlignVCenter)
+		self.label_4.setObjectName("label_4")
+		self.label_5 = QtWidgets.QLabel(parent=self.centralwidget)
+		self.label_5.setGeometry(QtCore.QRect(160, 310, 201, 51))
+		font = QtGui.QFont()
+		font.setPointSize(12)
+		self.label_5.setFont(font)
+		self.label_5.setObjectName("label_5")
+		self.label_6 = QtWidgets.QLabel(parent=self.centralwidget)
+		self.label_6.setGeometry(QtCore.QRect(160, 400, 161, 41))
+		font = QtGui.QFont()
+		font.setPointSize(12)
+		self.label_6.setFont(font)
+		self.label_6.setObjectName("label_6")
+		self.l4 = QtWidgets.QLineEdit(parent=self.centralwidget)
+		self.l4.setGeometry(QtCore.QRect(410, 230, 181, 41))
+		self.l4.setObjectName("l4")
+		self.l5 = QtWidgets.QLineEdit(parent=self.centralwidget)
+		self.l5.setGeometry(QtCore.QRect(410, 320, 181, 41))
+		self.l5.setObjectName("l5")
+		self.l6 = QtWidgets.QLineEdit(parent=self.centralwidget)
+		self.l6.setGeometry(QtCore.QRect(410, 400, 181, 41))
+		self.l6.setObjectName("l6")
+		self.pushButton = QtWidgets.QPushButton(parent=self.centralwidget)
+		self.pushButton.setGeometry(QtCore.QRect(230, 470, 261, 61))
+		font = QtGui.QFont()
+		font.setPointSize(12)
+		self.pushButton.setFont(font)
+		self.pushButton.setStyleSheet("background-color: rgb(242, 255, 94);")
+		self.pushButton.setObjectName("pushButton")
+		MainWindow.setCentralWidget(self.centralwidget)
+		self.menubar = QtWidgets.QMenuBar(parent=MainWindow)
+		self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 26))
+		self.menubar.setObjectName("menubar")
+		MainWindow.setMenuBar(self.menubar)
+		self.statusbar = QtWidgets.QStatusBar(parent=MainWindow)
+		self.statusbar.setObjectName("statusbar")
+		MainWindow.setStatusBar(self.statusbar)
+
+		self.retranslateUi(MainWindow)
+		QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+	def retranslateUi(self, MainWindow):
+		_translate = QtCore.QCoreApplication.translate
+		MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+		self.label.setText(_translate("MainWindow", "Название сорта"))
+		self.label_2.setText(_translate("MainWindow", "Степень обжарки"))
+		self.label_3.setText(_translate("MainWindow", "Молотый / в зернах"))
+		self.label_4.setText(_translate("MainWindow", "Описание вкуса"))
+		self.label_5.setText(_translate("MainWindow", "Цена"))
+		self.label_6.setText(_translate("MainWindow", "Объём упаковки"))
+		self.pushButton.setText(_translate("MainWindow", "Добавить запись"))
+
+
+class Ui_MainWindow(object):
+	def setupUi(self, MainWindow):
+		MainWindow.setObjectName("MainWindow")
+		MainWindow.resize(1000, 800)
+		MainWindow.setMinimumSize(QtCore.QSize(1000, 800))
+		MainWindow.setMaximumSize(QtCore.QSize(1000, 800))
+		self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
+		self.centralwidget.setObjectName("centralwidget")
+		self.table = QtWidgets.QTableWidget(parent=self.centralwidget)
+		self.table.setGeometry(QtCore.QRect(0, 0, 1000, 600))
+		self.table.setObjectName("table")
+		self.table.setColumnCount(0)
+		self.table.setRowCount(0)
+		self.pushButton = QtWidgets.QPushButton(parent=self.centralwidget)
+		self.pushButton.setGeometry(QtCore.QRect(210, 600, 500, 150))
+		font = QtGui.QFont()
+		font.setPointSize(18)
+		self.pushButton.setFont(font)
+		self.pushButton.setStyleSheet("background-color: rgb(255, 193, 69);")
+		self.pushButton.setObjectName("pushButton")
+		MainWindow.setCentralWidget(self.centralwidget)
+		self.menubar = QtWidgets.QMenuBar(parent=MainWindow)
+		self.menubar.setGeometry(QtCore.QRect(0, 0, 1000, 26))
+		self.menubar.setObjectName("menubar")
+		MainWindow.setMenuBar(self.menubar)
+		self.statusbar = QtWidgets.QStatusBar(parent=MainWindow)
+		self.statusbar.setObjectName("statusbar")
+		MainWindow.setStatusBar(self.statusbar)
+
+		self.retranslateUi(MainWindow)
+		QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+	def retranslateUi(self, MainWindow):
+		_translate = QtCore.QCoreApplication.translate
+		MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+		self.pushButton.setText(_translate("MainWindow", "Добавить запись"))
+
+
+class AddWidget(QMainWindow, Ui_AddEditCoffee):
 	def __init__(self):
 		super().__init__()
-		uic.loadUi('addEditCoffeeForm.ui', self)  # Загружаем дизайн
+		self.setupUi(self)
 
 		self.pushButton.clicked.connect(self.act)
 
@@ -34,12 +174,12 @@ class AddWidget(QMainWindow):
 		self.mywidget.show()
 
 
-class MyWidget(QMainWindow):
+class MyWidget(QMainWindow, Ui_MainWindow):
 	def __init__(self):
 		super().__init__()
-		uic.loadUi('main.ui', self)  # Загружаем дизайн
+		self.setupUi(self)
 
-		connection = sqlite3.connect('coffee.sqlite')
+		connection = sqlite3.connect('data/coffee.sqlite')
 		cursor = connection.cursor()
 
 		query = '''SELECT * FROM table_for_coffee'''
